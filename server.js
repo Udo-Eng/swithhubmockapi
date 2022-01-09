@@ -5,8 +5,10 @@ const routes = require('./routes');
 
 const app = express();
 
+app.use(express.json());
 
-app.get('/Users', routes.getUsers)
+
+app.get('/users', routes.getUsers)
 
 app.post('/login', routes.login);
 
@@ -14,7 +16,7 @@ app.post('/signup', routes.signup)
 
 app.post('/companyinfo', routes.addcompanyinfo);
 
-app.post('/products/add', routes.addproducts);
+app.post('/product/add', routes.addproducts);
 
 app.get('/products', routes.getProducts)
 
